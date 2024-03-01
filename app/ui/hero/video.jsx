@@ -10,7 +10,7 @@ import image6 from "@/public/6.png";
 import image7 from "@/public/7.png";
 import image8 from "@/public/8.png";
 import image9 from "@/public/9.png";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
 export default function Video() {
   const boxe1 = useRef(null);
@@ -24,17 +24,10 @@ export default function Video() {
   const boxe9 = useRef(null);
   const wrapper = useRef(null);
 
-  const allrefs = [
-    boxe3,
-    boxe9,
-    boxe2,
-    boxe5,
-    boxe1,
-    boxe4,
-    boxe7,
-    boxe6,
-    boxe8,
-  ];
+  const allrefs = useMemo(
+    () => [boxe3, boxe9, boxe2, boxe5, boxe1, boxe4, boxe7, boxe6, boxe8],
+    []
+  );
 
   const allimages = [
     image1,
@@ -48,7 +41,7 @@ export default function Video() {
     image9,
   ];
 
-  const sequence = [0, 5, 6, 1, 8, 4, 3, 7, 2];
+  const sequence = useMemo(() => [0, 5, 6, 1, 8, 4, 3, 7, 2], []);
 
   useEffect(() => {
     const wrapperElement = wrapper.current;
