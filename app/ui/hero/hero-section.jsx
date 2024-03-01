@@ -13,7 +13,7 @@ export default function HeroSection() {
           <div className="w-3/6 flex flex-col pb-20 max-[1434px]:order-2 max-[1434px]:w-full max-[1434px]:px-7 max-[1434px]:pb-5 max-[768px]:pb-[40px]">
             <div className="pr-10 mt-auto mb-auto max-[1434px]:flex max-[1434px]:flex-col max-[1434px]:items-center max-[1434px]:pr-0">
               <p className="text-2xl mb-2 max-[1434px]:text-center ">
-                Hi, I'm Teja
+                Hi, I&rsquo;m Teja
               </p>
               <h2 className="text-5xl mb-4 max-[1434px]:text-center font-bold heading">
                 I Do Video Editing
