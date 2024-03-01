@@ -45,7 +45,7 @@ export default function Video() {
 
   useEffect(() => {
     const wrapperElement = wrapper.current;
-    const wrapperWidth = 1768;
+    const wrapperWidth = 1370;
     wrapperElement.style.transition = "transform 6.2s linear";
     wrapperElement.style.transform = `translate(-${wrapperWidth}px)`;
     sequence.map((num, index) => {
@@ -57,7 +57,7 @@ export default function Video() {
 
   return (
     <div className="flex flex-col  items-center relative">
-      <div className="video-container grid grid-cols-3 gap-1 w-[400px] h-[400px] mb-20 mx-auto max-[480px]:w-[250px] max-[480px]:h-[250px]">
+      <div className="video-container grid grid-cols-3 gap-1 w-[400px] h-[400px] mb-20 mx-auto max-[480px]:w-[250px] max-[480px]:h-[250px] max-[768px]:mb-10">
         {allrefs.map((ref, index) => {
           return (
             <div key={index} ref={ref} className={`flex-1 relative box`}>
@@ -83,7 +83,7 @@ export default function Video() {
             {sequence.map((num, index) => {
               return (
                 <div key={index}>
-                  <div className="bg-white w-[200px] rounded-[20px] h-[80px] mx-2 max-[480px]:h-[60px]">
+                  <div className="bg-white w-[150px] rounded-[20px] h-[80px] mx-2 max-[480px]:h-[60px]">
                     <Image
                       className="w-full h-full object-cover rounded-[10px]"
                       src={allimages[num]}
@@ -102,25 +102,20 @@ export default function Video() {
                 </div>
               </div>
               <div className=" rounded mr-10">
-                <div className="h-10 w-[80px]"></div>
+                <div className="h-10 w-[310px]"></div>
               </div>
               <div className="rounded  mr-10">
-                <div className="h-10 w-[300px] bg-[#9A89FF] rounded flex items-center pl-3">
+                <div className="h-10 w-[370px] bg-[#9A89FF] rounded flex items-center pl-3">
                   Sound Track 3
                 </div>
               </div>
               <div className=" rounded mr-10">
                 <div className="h-10 w-[370px]"></div>
               </div>
-              <div className="rounded  mr-10">
-                <div className="h-10 w-[418px] bg-[#9A89FF] rounded flex items-center pl-3">
-                  Sound Track 5
-                </div>
-              </div>
             </div>
             <div className="flex mt-5">
               <div className="rounded mr-10">
-                <div className="h-10 w-[350px]"></div>
+                <div className="h-10 w-[580px]"></div>
               </div>
               <div className="rounded mr-10">
                 <div className="h-10 w-[370px] bg-[#4EC353] rounded flex items-center pl-3">
@@ -128,10 +123,10 @@ export default function Video() {
                 </div>
               </div>
               <div className="rounded mr-10">
-                <div className="h-10 w-[240px]"></div>
+                <div className="h-10 w-[200px]"></div>
               </div>
               <div className="rounded mr-10">
-                <div className="h-10 w-[660px] bg-[#4EC353] rounded flex items-center pl-3">
+                <div className="h-10 w-[210px] bg-[#4EC353] rounded flex items-center pl-3">
                   Sound Track 4
                 </div>
               </div>
