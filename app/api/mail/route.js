@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { resolve } from "styled-jsx/css";
 
 export async function POST(request) {
   const data = await request.json();
@@ -12,19 +13,23 @@ export async function POST(request) {
       pass: "rqdt mvrq ywnd zwzm",
     },
   });
-  // Compose email
+
   const mailOptions = {
     from: "kirankittu3760@gmail.com",
     to: "kirankittu3760@gmail.com",
     subject: "New Form Submission",
     text: `Name:${data.name}, Email: ${data.mail} Type of service: ${data.service}`,
   };
-  // Send email
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return new Response(JSON.stringify({ message: false }));
-    }
-    return new Response(JSON.stringify({ message: true }));
+
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(info);
+      }
+    });
   });
+
   return new Response(JSON.stringify({ message: true }));
 }
