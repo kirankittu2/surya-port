@@ -1,8 +1,8 @@
-"use server";
-
 import nodemailer from "nodemailer";
 
-export async function sendMail(formdata) {
+export async function POST(request) {
+  const data = await request.json();
+  console.log(data);
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -10,20 +10,19 @@ export async function sendMail(formdata) {
       pass: "rqdt mvrq ywnd zwzm",
     },
   });
-
   // Compose email
   const mailOptions = {
     from: "kirankittu3760@gmail.com",
     to: "kirankittu3760@gmail.com",
     subject: "New Form Submission",
-    text: `Email: ${formdata.get("mail")}`,
+    text: `Name:${data.name}, Email: ${data.mail}, Type of service: ${data.service}`,
   };
-
   // Send email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return res.status(500).send("Error sending email");
+      return new Response(JSON.stringify({ message: false }));
     }
-    res.send("Email sent successfully");
+    return new Response(JSON.stringify({ message: true }));
   });
+  return new Response(JSON.stringify({ message: true }));
 }

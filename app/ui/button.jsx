@@ -1,6 +1,8 @@
-export default function Button({ name }) {
+export default function Button({ name, onClick }) {
   return (
-    <button className="bg-[#6fa871] text-white  py-3 px-10 rounded-[5px] text-sm">
+    <button
+      onClick={onClick}
+      className="bg-[#6fa871] text-white  py-3 px-10 rounded-[5px] text-sm">
       {name}
     </button>
   );
