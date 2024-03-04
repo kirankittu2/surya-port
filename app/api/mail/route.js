@@ -4,18 +4,20 @@ export async function POST(request) {
   const data = await request.json();
   console.log(data);
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.office365.com",
+    port: 587,
+    secure: false,
     auth: {
-      user: "kirankittu3760@gmail.com",
-      pass: "rqdt mvrq ywnd zwzm",
+      user: "saisurya.teja@outlook.com",
+      pass: "qspqphrpkhycirty",
     },
   });
   // Compose email
   const mailOptions = {
-    from: "kirankittu3760@gmail.com",
-    to: "kirankittu3760@gmail.com",
+    from: "saisurya.teja@outlook.com",
+    to: "saisurya.teja@outlook.com",
     subject: "New Form Submission",
-    text: `Name:${data.name}, Email: ${data.mail}, Type of service: ${data.service}`,
+    text: `Name:${data.name}, Email: ${data.mail} Type of service: ${data.service}`,
   };
   // Send email
   transporter.sendMail(mailOptions, (error, info) => {
