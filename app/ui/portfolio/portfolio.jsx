@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 // import Video from "../video";
-const Video = dynamic(() => import("../video"), { ssr: true });
+const Video = dynamic(() => import("../video"), { ssr: false });
 
 export default function Portfolio() {
   return (

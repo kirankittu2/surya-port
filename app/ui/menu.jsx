@@ -20,7 +20,7 @@ export default function Menu() {
   return (
     <>
       <div className="h-[80px] bg-[#161616] w-full border-b border-white/5 flex items-center px-10 sticky top-0 z-40 justify-between min-[768px]:hidden">
-        <p className="text-xl uppercase font-bold">Teja</p>
+        <p className="text-xl font-bold">teja.media</p>
         <Image src={menu} alt="" onClick={handleMenu} />
       </div>
       <div
