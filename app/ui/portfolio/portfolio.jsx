@@ -10,11 +10,11 @@ export default function Portfolio() {
         My Portfolio
       </h2>
       <div className="flex flex-wrap gap-10 justify-center p-10">
-        {/* <Video src="/sample-one.mp4" />
+        <Video src="/sample-one.mp4" />
         <Video src="/sample-two.mp4" />
         <Video src="/sample-three.mp4" />
         <Video src="/sample-four.mp4" />
-        <Video src="/sample-five.mp4" /> */}
+        <Video src="/sample-five.mp4" />
       </div>
     </section>
   );

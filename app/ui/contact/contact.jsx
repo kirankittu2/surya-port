@@ -28,6 +28,7 @@ export default function Contact() {
       <h2 className="text-4xl font-bold mb-8 top-heading text-black">
         Contact me
       </h2>
+
       <form
         onSubmit={handleMail}
         className="w-[400px] flex flex-col items-center">
@@ -53,7 +54,12 @@ export default function Contact() {
           <option value="Full length videos">Full length videos</option>
           <option value="Short form videos">Short form videos</option>
         </select>
-        <Button name="Submit" />
+        {sent && (
+          <p className="text-black mb-5 text-center">
+            Thanks for submitting, we will get back to you shortly
+          </p>
+        )}
+        {!sent && <Button name="Submit" />}
       </form>
     </section>
   );
