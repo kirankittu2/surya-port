@@ -16,6 +16,7 @@ export default function Contact() {
         name: e.target.name.value,
         service: e.target.service.value,
       }),
+      cache: "no-store",
     });
     const isSent = await response.json();
     isSentHandle(isSent.message);

@@ -4,12 +4,12 @@ export async function POST(request) {
   const data = await request.json();
   console.log(data);
   const transporter = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
+    host: "smtp.gmail.com",
     port: 587,
     secure: false,
     auth: {
       user: "kirankittu3760@gmail.com",
-      pass: "cknxcjaatzxbrtzf",
+      pass: "rqdt mvrq ywnd zwzm",
     },
   });
   // Compose email
