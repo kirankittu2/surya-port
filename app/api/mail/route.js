@@ -9,14 +9,14 @@ export async function POST(request) {
     port: 465,
     secure: true,
     auth: {
-      user: "kirankittu3760@gmail.com",
-      pass: "rqdt mvrq ywnd zwzm",
+      user: "saisurya.teja@outlook.com",
+      pass: "qspqphrpkhycirty",
     },
   });
 
   const mailOptions = {
-    from: "kirankittu3760@gmail.com",
-    to: "kirankittu3760@gmail.com",
+    from: "saisurya.teja@outlook.com",
+    to: "saisurya.teja@outlook.com",
     subject: "New Form Submission",
     text: `Name:${data.name}, Email: ${data.mail} Type of service: ${data.service}`,
   };
